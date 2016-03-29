@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63E116711CA1848900376C10 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116701CA1848900376C10 /* main.cpp */; };
+		63E116861CA184AA00376C10 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116781CA184AA00376C10 /* NodeController.cpp */; };
+		63E116871CA184AA00376C10 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E1167A1CA184AA00376C10 /* NodeRunner.cpp */; };
+		63E116881CA184AA00376C10 /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E1167C1CA184AA00376C10 /* ArrayNode.cpp */; };
+		63E116891CA184AA00376C10 /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E1167E1CA184AA00376C10 /* CTECArray.cpp */; };
+		63E1168A1CA184AA00376C10 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116801CA184AA00376C10 /* CTECList.cpp */; };
+		63E1168B1CA184AA00376C10 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116821CA184AA00376C10 /* Node.cpp */; };
+		63E1168C1CA184AA00376C10 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116841CA184AA00376C10 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		63E1166D1CA1848900376C10 /* Nodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nodes; sourceTree = BUILT_PRODUCTS_DIR; };
-		63E116701CA1848900376C10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		63E116781CA184AA00376C10 /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
+		63E116791CA184AA00376C10 /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
+		63E1167A1CA184AA00376C10 /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeRunner.cpp; sourceTree = "<group>"; };
+		63E1167C1CA184AA00376C10 /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
+		63E1167D1CA184AA00376C10 /* ArrayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayNode.h; sourceTree = "<group>"; };
+		63E1167E1CA184AA00376C10 /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
+		63E1167F1CA184AA00376C10 /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		63E116801CA184AA00376C10 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		63E116811CA184AA00376C10 /* CTECList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		63E116821CA184AA00376C10 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		63E116831CA184AA00376C10 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		63E116841CA184AA00376C10 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		63E116851CA184AA00376C10 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +59,8 @@
 		63E116641CA1848900376C10 = {
 			isa = PBXGroup;
 			children = (
-				63E1166F1CA1848900376C10 /* Nodes */,
+				63E116771CA184AA00376C10 /* Controller */,
+				63E1167B1CA184AA00376C10 /* Model */,
 				63E1166E1CA1848900376C10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +73,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63E1166F1CA1848900376C10 /* Nodes */ = {
+		63E116771CA184AA00376C10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63E116701CA1848900376C10 /* main.cpp */,
+				63E116781CA184AA00376C10 /* NodeController.cpp */,
+				63E116791CA184AA00376C10 /* NodeController.h */,
+				63E1167A1CA184AA00376C10 /* NodeRunner.cpp */,
 			);
-			path = Nodes;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63E1167B1CA184AA00376C10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63E1167C1CA184AA00376C10 /* ArrayNode.cpp */,
+				63E1167D1CA184AA00376C10 /* ArrayNode.h */,
+				63E1167E1CA184AA00376C10 /* CTECArray.cpp */,
+				63E1167F1CA184AA00376C10 /* CTECArray.h */,
+				63E116801CA184AA00376C10 /* CTECList.cpp */,
+				63E116811CA184AA00376C10 /* CTECList.h */,
+				63E116821CA184AA00376C10 /* Node.cpp */,
+				63E116831CA184AA00376C10 /* Node.h */,
+				63E116841CA184AA00376C10 /* Timer.cpp */,
+				63E116851CA184AA00376C10 /* Timer.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63E116711CA1848900376C10 /* main.cpp in Sources */,
+				63E1168B1CA184AA00376C10 /* Node.cpp in Sources */,
+				63E116861CA184AA00376C10 /* NodeController.cpp in Sources */,
+				63E1168C1CA184AA00376C10 /* Timer.cpp in Sources */,
+				63E116871CA184AA00376C10 /* NodeRunner.cpp in Sources */,
+				63E116881CA184AA00376C10 /* ArrayNode.cpp in Sources */,
+				63E1168A1CA184AA00376C10 /* CTECList.cpp in Sources */,
+				63E116891CA184AA00376C10 /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
