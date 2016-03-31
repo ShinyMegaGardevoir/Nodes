@@ -238,6 +238,7 @@ Type CTECList<Type>::set(int index, const Type& value) //
 	assert(index < size && index >= 0);
 
 		ArrayNode<Type> * current = head;
+    Type returnValue;
 		//Inclusive because I am inside the bounds.
 		for (int i = 0; i <= index; i++)
 		{
@@ -247,9 +248,12 @@ Type CTECList<Type>::set(int index, const Type& value) //
 			}
 			else
 			{
-				return current->setValue(value);
+                current->setValue(value);
+                return current->getValue();
 			}
 		}
+    
+    return returnValue;
 
 
 }
@@ -370,15 +374,11 @@ template<class Type>
 void CTECList<Type> :: swap(int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    ArrayNode<Type> * first = getFromIndex(indexOne);
-    ArrayNode<Type> * second = getFromIndex(indexTwo);
-    ArrayNode<Type> * temp = new ArrayNode<Type>();
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
     
-    temp->setValue(first->getValue());
-    first->setValue(second->geValue());
-    second->setValue(temp->getValue());
     
-    delete temp;
 }
 
 template<class Type>
