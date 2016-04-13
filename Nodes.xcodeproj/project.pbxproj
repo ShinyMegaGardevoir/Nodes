@@ -14,6 +14,8 @@
 		63E1168A1CA184AA00376C10 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116801CA184AA00376C10 /* CTECList.cpp */; };
 		63E1168B1CA184AA00376C10 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116821CA184AA00376C10 /* Node.cpp */; };
 		63E1168C1CA184AA00376C10 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116841CA184AA00376C10 /* Timer.cpp */; };
+		63F7AA6E1CBE8B9E00194FB8 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63F7AA6C1CBE8B9E00194FB8 /* TreeNode.cpp */; };
+		63F7AA711CBE90B700194FB8 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63F7AA6F1CBE90B700194FB8 /* CTECBinaryTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		63E116831CA184AA00376C10 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		63E116841CA184AA00376C10 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		63E116851CA184AA00376C10 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		63F7AA6C1CBE8B9E00194FB8 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		63F7AA6D1CBE8B9E00194FB8 /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
+		63F7AA6F1CBE90B700194FB8 /* CTECBinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTree.cpp; sourceTree = "<group>"; };
+		63F7AA701CBE90B700194FB8 /* CTECBinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				63E116831CA184AA00376C10 /* Node.h */,
 				63E116841CA184AA00376C10 /* Timer.cpp */,
 				63E116851CA184AA00376C10 /* Timer.h */,
+				63F7AA6C1CBE8B9E00194FB8 /* TreeNode.cpp */,
+				63F7AA6D1CBE8B9E00194FB8 /* TreeNode.hpp */,
+				63F7AA6F1CBE90B700194FB8 /* CTECBinaryTree.cpp */,
+				63F7AA701CBE90B700194FB8 /* CTECBinaryTree.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,8 +169,10 @@
 				63E1168B1CA184AA00376C10 /* Node.cpp in Sources */,
 				63E116861CA184AA00376C10 /* NodeController.cpp in Sources */,
 				63E1168C1CA184AA00376C10 /* Timer.cpp in Sources */,
+				63F7AA6E1CBE8B9E00194FB8 /* TreeNode.cpp in Sources */,
 				63E116871CA184AA00376C10 /* NodeRunner.cpp in Sources */,
 				63E116881CA184AA00376C10 /* ArrayNode.cpp in Sources */,
+				63F7AA711CBE90B700194FB8 /* CTECBinaryTree.cpp in Sources */,
 				63E1168A1CA184AA00376C10 /* CTECList.cpp in Sources */,
 				63E116891CA184AA00376C10 /* CTECArray.cpp in Sources */,
 			);
@@ -281,6 +293,7 @@
 				63E116761CA1848900376C10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
