@@ -235,12 +235,9 @@ void NodeController :: start() //Le start method
 	arrayTimer.stopTimer();
 	arrayTimer.displayTimerInformation();
 **/
-/**
+
     numbers->addToFront(1);
 	testLists();
-**/
-    
- //   doMergesort();
-    doQuick();
+
 }
 

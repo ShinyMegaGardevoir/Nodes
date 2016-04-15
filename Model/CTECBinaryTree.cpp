@@ -130,7 +130,7 @@ bool CTECBinaryTree<Type> :: contains(Type value)
 }
 
 template <class Type>
-bool CTECBinaryTree<Type> :: contains(Type value, CTECBinaryTree<Type> currentTree)
+bool CTECBinaryTree<Type> :: contains(Type value, CTECBinaryTree<Type> * currentTree)
 {
     /*
      Is the value in root? - return true else

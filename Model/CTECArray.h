@@ -19,6 +19,7 @@ public:
 	Type get(int position);
 	void set(int position, const Type& value);
     void selectionSort();
+    int seqSearch(int data [], const Type& value);
 
 private:
 	int size;

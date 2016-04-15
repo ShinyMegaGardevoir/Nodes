@@ -141,3 +141,28 @@ void CTECArray<Type> :: selectionSort()
 }
 
 
+template<class Type>
+int CTECArray<Type> :: seqSearch(int item [], const Type& value)
+{
+    int loc;
+    bool found = false;
+    
+    for(loc = 0; loc < size; loc++)
+    {
+        if (item[loc] == value)
+        {
+            found = true;
+            break;
+        }
+    }
+    
+    if (found)
+    {
+        return loc;
+    }
+    else
+    {
+        return -1;
+    }
+    
+}
