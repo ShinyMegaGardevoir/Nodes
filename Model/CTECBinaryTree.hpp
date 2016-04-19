@@ -23,6 +23,8 @@ namespace CTECData
         void calculateSize(TreeNode<Type> * currentNode);
         int size;
         void insert(const Type& value, CTECBinaryTree<Type> * currentTree);
+        TreeNode<Type> * getRightMostChild(CTECBinaryTree * leftSubTree);
+        TreeNode<Type> * getLeftMostChild(CTECBinaryTree * rightSubTree);
         
     public:
         CTECBinaryTree();
