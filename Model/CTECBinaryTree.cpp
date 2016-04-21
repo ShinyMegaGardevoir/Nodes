@@ -266,4 +266,57 @@ void CTECBinaryTree<Type> :: remove(const Type& value)
     }
 }
 
+template <class Type>
+void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToBeDeleted)
+{
+    TreeNode<Type> * current;
+    TreeNode<Type> * trailing;
+    TreeNode<Type> * temp;
+    
+    if(nodeToBeDeleted == nullptr)
+    {
+        cerr << "You can't remove an empty value." << endl;
+    }
+    else if(nodeToBeDeleted->getRightChild == nullptr && nodeToBeDeleted->getLeftChild() == nullptr)
+    {
+        temp = nodeToBeDeleted;
+        nodeToBeDeleted = nullptr;
+        delete temp;
+    }
+    else if(nodeToBeDeleted->getRightChild() == nullptr)
+    {
+        temp = nodeToBeDeleted;
+        nodeToBeDeleted = temp->getLeftChild();
+        delete temp;
+    }
+    else if(nodeToBeDeleted->getLeftChild() == nullptr)
+    {
+        temp = nodeToBeDeleted;
+        nodeToBeDeleted = temp->getRightChild();
+        delete temp;
+    }
+    else
+    {
+        current = nodeToBeDeleted->getLeftChild();
+        trailing = nullptr;
+        while(current->getRightChild != nullptr)
+        {
+            trailing = current;
+            current = current->getRightChild();
+        }
+        
+        nodeToBeDeleted->setValue(current->getValue());
+        
+        if(trailing == nullptr)
+        {
+            nodeToBeDeleted->setLeftChild(current->getLeftChild());
+        }
+        else
+        {
+            trailing->setRightChild(current->getLeftChild());
+        }
+        
+        delete current;
+    }
+}
 

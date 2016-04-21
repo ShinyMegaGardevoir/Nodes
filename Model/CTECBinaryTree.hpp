@@ -25,7 +25,9 @@ namespace CTECData
         void insert(const Type& value, CTECBinaryTree<Type> * currentTree);
         TreeNode<Type> * getRightMostChild(CTECBinaryTree * leftSubTree);
         TreeNode<Type> * getLeftMostChild(CTECBinaryTree * rightSubTree);
-        void deleteNode(TreeNode<Type> * currentNode);
+        void remove(TreeNode<Type> * nodeToBeDeleted);
+        
+        
     public:
         CTECBinaryTree();
         ~CTECBinaryTree();
