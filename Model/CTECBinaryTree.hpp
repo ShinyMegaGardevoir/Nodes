@@ -25,13 +25,13 @@ namespace CTECData
         void insert(const Type& value, CTECBinaryTree<Type> * currentTree);
         TreeNode<Type> * getRightMostChild(CTECBinaryTree * leftSubTree);
         TreeNode<Type> * getLeftMostChild(CTECBinaryTree * rightSubTree);
-        
+        void deleteNode(TreeNode<Type> * currentNode);
     public:
         CTECBinaryTree();
         ~CTECBinaryTree();
         bool insert(const Type& value);
         bool contains(Type value);
-        Type remove(const Type& value);
+        void remove(const Type& value);
         int getHeight();
         bool isBalanced();
         TreeNode<Type> * getRoot();
@@ -39,6 +39,7 @@ namespace CTECData
         void postorderTraversal(TreeNode<Type> * currentNode);
         void preorderTraversal(TreeNode<Type> * currentNode);
         int getSize();
+        
     };
 }
 
