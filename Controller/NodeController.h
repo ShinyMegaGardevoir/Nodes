@@ -21,6 +21,8 @@
 
 #include "../Model/CTECList.cpp"
 
+#include "../Model/CTECBinaryTree.cpp"
+
 using namespace std;
 
 
@@ -48,6 +50,8 @@ private:
     void doMergesort();
     void mergesort(int data [], int size);
     void merge(int data [], int sizeOne, int sizeTwo);
+    
+    void tryTree();
     
 };
 

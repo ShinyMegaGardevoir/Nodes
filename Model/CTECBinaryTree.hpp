@@ -19,12 +19,12 @@ namespace CTECData
         TreeNode<Type> * root;
         int height;
         bool balanced;
-        bool contains(Type value, CTECBinaryTree<Type> * currentTree);
+        bool contains(Type value, TreeNode<Type> * currentTree);
         void calculateSize(TreeNode<Type> * currentNode);
         int size;
-        void insert(const Type& value, CTECBinaryTree<Type> * currentTree);
-        TreeNode<Type> * getRightMostChild(CTECBinaryTree * leftSubTree);
-        TreeNode<Type> * getLeftMostChild(CTECBinaryTree * rightSubTree);
+        void insert(const Type& value, TreeNode<Type> * currentTree);
+        TreeNode<Type> * getRightMostChild(TreeNode<Type> * leftSubTree);
+        TreeNode<Type> * getLeftMostChild(TreeNode<Type> * rightSubTree);
         void remove(TreeNode<Type> * nodeToBeDeleted);
         
         

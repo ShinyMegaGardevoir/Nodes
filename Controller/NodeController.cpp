@@ -217,6 +217,25 @@ void NodeController::doQuick()
     
 }
 
+void NodeController::tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(20);
+    testTree.insert(2);
+    testTree.insert(1);
+    cout << testTree.contains(7) << endl;
+    cout << "InTraversal " << endl;
+    testTree.inorderTraversal(testTree.getRoot());
+    testTree.remove(10);
+    cout << "\nPreorderTraversal " << endl;
+    testTree.preorderTraversal(testTree.getRoot());
+    cout << "\nPostorderTraversal " << endl;
+    testTree.postorderTraversal(testTree.getRoot());
+    cout << "\nTrees! " << endl;
+}
+
+
+
 void NodeController :: start() //Le start method
 {
 /**	arrayTimer.startTimer();
@@ -236,8 +255,6 @@ void NodeController :: start() //Le start method
 	arrayTimer.displayTimerInformation();
 **/
 
-    numbers->addToFront(1);
-	testLists();
-
+    tryTree();
 }
 
