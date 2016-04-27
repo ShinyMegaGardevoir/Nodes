@@ -223,10 +223,17 @@ void NodeController::tryTree()
     testTree.insert(20);
     testTree.insert(2);
     testTree.insert(1);
-    cout << testTree.contains(7) << endl;
+    if(testTree.contains(2) == 0)
+    {
+        cout << "False" << endl;
+    }
+    else if(testTree.contains(2) > 0)
+    {
+        cout << "True" << endl;
+    }
     cout << "InTraversal " << endl;
     testTree.inorderTraversal(testTree.getRoot());
-    testTree.remove(10);
+    testTree.remove(1);
     cout << "\nPreorderTraversal " << endl;
     testTree.preorderTraversal(testTree.getRoot());
     cout << "\nPostorderTraversal " << endl;

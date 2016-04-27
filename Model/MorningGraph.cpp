@@ -7,6 +7,9 @@
 //
 
 #include "MorningGraph.hpp"
+#include <iostream>
+#include <queue>
+using namespace std;
 
 template <class Type>
 const int MorningGraph<Type> :: MAXIMUM;
@@ -85,4 +88,54 @@ void MorningGraph<Type> :: removeEdge(int source, int target)
 {
     assert(source < size() && target < size());
     edges[source][target] = false;
+}
+
+template <class Type>
+void MorningGraph<Type> :: depthFirstTraversal(MorningGraph<Type> graph, int vertex, bool markedVertices[])
+{
+    std::set<int> connections = graph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    markedVertices[vertex] = true;
+    cout << graph[vertex] << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        if(!markedVertices[*setIterator])
+        {
+            depthFirstTraversal(graph, *setIterator, markedVertices);
+        }
+    }
+    
+}
+
+template <class Type>
+void MorningGraph<Type> :: breadthFirstTraversal(MorningGraph<Type> graph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>::iterator setIterator;
+    std::queue<int> vertexQueue;
+    assert(vertex < graph.size());
+    
+    std::fill_n(markedVertices, graph.size(), false);
+    markedVertices[vertex] = true;
+    cout << graph[vertex] << endl;
+    vertexQueue.push(vertex);
+    while(!vertexQueue.empty())
+    {
+        connections = graph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        
+    }
+}
+
+template <class Type>
+void MorningGraph<Type> :: depthFirstTraversal(MorningGraph<Type> graph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    assert(vertex < graph.size());
+    std::fill_n(markedVertices, graph.size(), false);
+    depthFirstTraversal(graph, vertex, markedVertices);
 }

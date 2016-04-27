@@ -21,7 +21,10 @@
         bool edges [MAXIMUM][MAXIMUM];
         Type labels [MAXIMUM];
         int manyVertices;
-        
+        void depthFirstTraversal(MorningGraph<Type> graph, int vertex, bool markedVertices[]);
+        bool * markedVertices;
+        int vertex;
+        MorningGraph<Type> graph;
         
     public:
         MorningGraph();
@@ -35,6 +38,8 @@
         bool isEdge(int source, int target) const;
         std::set<int> neighbors(int vertex) const;
         Type operator [] (int vertex) const;
+        void depthFirstTraversal(MorningGraph<Type> graph, int vertex);
+        void breadthFirstTraversal(MorningGraph<Type> graph, int vertex);
         
         
     };
