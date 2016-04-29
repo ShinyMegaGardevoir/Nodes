@@ -252,8 +252,9 @@ void NodeController :: tryGraphs()
     testerGraph.addVertex(3);
     testerGraph.addVertex(1);
     testerGraph.addVertex(13);
-    //Add 7 vertices
-    //Connect the vertices
+    testerGraph.addVertex(19);
+    testerGraph.addVertex(23);
+    testerGraph.addVertex(45);
     testerGraph.addEdge(0, 1);
     testerGraph.addEdge(1, 0);
     testerGraph.addEdge(1, 5);
@@ -267,19 +268,36 @@ void NodeController :: tryGraphs()
     testerGraph.addEdge(6, 7);
     testerGraph.addEdge(4, 2);
     testerGraph.addEdge(7, 1);
+    testerGraph.addEdge(5, 10);
+    testerGraph.addEdge(9, 3);
+    testerGraph.addEdge(3, 9);
+    testerGraph.addEdge(4, 9);
+    testerGraph.addEdge(3, 0);
+    testerGraph.addEdge(8, 5);
+    testerGraph.addEdge(5, 8);
+    testerGraph.addEdge(5, 5);
+    testerGraph.addEdge(10, 9);
     
     cout << "Beginning of Breadth First Traversal" << endl;
     testerGraph.breadthFirstTraversal(testerGraph, 0);
+    cout << "End of Breadth First Traversal." << endl;
     cout << "" << endl;
-    cout << "End of Breadth First, Beginning of Depth First" << endl;
+    cout << "Beginning of Depth First Traversal." << endl;
     testerGraph.depthFirstTraversal(testerGraph, 0);
     cout << "" << endl;
     cout << "End of Depth First Traversal" << endl;
+    cout << "" << endl;
 }
-
 
 void NodeController :: start() //Le start method
 {
+   tryGraphs();
+    
+    
+    
+    
+    
+    
 /**	arrayTimer.startTimer();
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 		{
@@ -297,6 +315,6 @@ void NodeController :: start() //Le start method
 	arrayTimer.displayTimerInformation();
 **/
 
-    tryGraphs();
+    
 }
 
