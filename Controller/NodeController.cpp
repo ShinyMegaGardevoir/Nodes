@@ -241,6 +241,41 @@ void NodeController::tryTree()
     cout << "\nTrees! " << endl;
 }
 
+void NodeController :: tryGraphs()
+{
+    MorningGraph<int> testerGraph;
+    testerGraph.addVertex(7);
+    testerGraph.addVertex(10);
+    testerGraph.addVertex(21);
+    testerGraph.addVertex(11);
+    testerGraph.addVertex(52);
+    testerGraph.addVertex(3);
+    testerGraph.addVertex(1);
+    testerGraph.addVertex(13);
+    //Add 7 vertices
+    //Connect the vertices
+    testerGraph.addEdge(0, 1);
+    testerGraph.addEdge(1, 0);
+    testerGraph.addEdge(1, 5);
+    testerGraph.addEdge(1, 2);
+    testerGraph.addEdge(2, 4);
+    testerGraph.addEdge(5, 2);
+    testerGraph.addEdge(4, 5);
+    testerGraph.addEdge(2, 7);
+    testerGraph.addEdge(6, 6);
+    testerGraph.addEdge(7, 6);
+    testerGraph.addEdge(6, 7);
+    testerGraph.addEdge(4, 2);
+    testerGraph.addEdge(7, 1);
+    
+    cout << "Beginning of Breadth First Traversal" << endl;
+    testerGraph.breadthFirstTraversal(testerGraph, 0);
+    cout << "" << endl;
+    cout << "End of Breadth First, Beginning of Depth First" << endl;
+    testerGraph.depthFirstTraversal(testerGraph, 0);
+    cout << "" << endl;
+    cout << "End of Depth First Traversal" << endl;
+}
 
 
 void NodeController :: start() //Le start method
@@ -262,6 +297,6 @@ void NodeController :: start() //Le start method
 	arrayTimer.displayTimerInformation();
 **/
 
-    tryTree();
+    tryGraphs();
 }
 

@@ -23,6 +23,7 @@
 
 #include "../Model/CTECBinaryTree.cpp"
 
+#include "../Model/MorningGraph.cpp"
 using namespace std;
 
 
@@ -52,6 +53,8 @@ private:
     void merge(int data [], int sizeOne, int sizeTwo);
     
     void tryTree();
+    
+    void tryGraphs();
     
 };
 

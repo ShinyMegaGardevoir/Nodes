@@ -15,6 +15,24 @@ template <class Type>
 const int MorningGraph<Type> :: MAXIMUM;
 
 template <class Type>
+MorningGraph<Type> :: MorningGraph()
+{
+    this->manyVertices = 0;
+}
+
+template <class Type>
+MorningGraph<Type> :: ~MorningGraph()
+{
+    
+}
+
+template <class Type>
+int MorningGraph<Type> :: size() const
+{
+    return manyVertices;
+}
+
+template <class Type>
 void MorningGraph<Type> :: addEdge(int source, int target)
 {
     assert(source < size());
@@ -97,7 +115,16 @@ void MorningGraph<Type> :: depthFirstTraversal(MorningGraph<Type> graph, int ver
     std::set<int>::iterator setIterator;
     
     markedVertices[vertex] = true;
-    cout << graph[vertex] << endl;
+    if(setIterator != connections.end())
+    {
+        cout << graph[vertex];
+        cout << ", ";
+    }
+    else if(setIterator == connections.end())
+    {
+        cout << graph[vertex];
+        cout << ", Connection end." << endl;
+    }
     
     for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
     {
@@ -120,13 +147,38 @@ void MorningGraph<Type> :: breadthFirstTraversal(MorningGraph<Type> graph, int v
     
     std::fill_n(markedVertices, graph.size(), false);
     markedVertices[vertex] = true;
-    cout << graph[vertex] << endl;
+    
+    if(setIterator != connections.end())
+    {
+        cout << graph[vertex];
+        cout << ", ";
+    }
+    else if(setIterator == connections.end())
+    {
+        cout << graph[vertex];
+        cout << ", Connection end." << endl;
+    }
+
     vertexQueue.push(vertex);
     while(!vertexQueue.empty())
     {
         connections = graph.neighbors(vertexQueue.front());
         vertexQueue.pop();
         
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!markedVertices[*setIterator])
+            {
+                markedVertices[*setIterator] = true;
+                cout << graph[*setIterator];
+                cout << ", ";
+                vertexQueue.push(*setIterator);
+            }
+            else if(markedVertices[*setIterator])
+            {
+                cout << "Iterator end. " << endl;
+            }
+        }
         
     }
 }
