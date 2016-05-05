@@ -405,3 +405,53 @@ void CTECList<Type> :: selectionSort()
     }
 }
 
+template <class Type>
+int CTECList<Type> :: nextIndexOf(int startingIndex, Type searchValue)
+{
+    assert(this->size > 0);
+    assert(startingIndex >= 0 && startingIndex < this->size);
+    
+    ArrayNode<Type> * current = head;
+    int indexNotFound = -1;
+    
+    for(int index = 0; index < startingIndex; index++)
+    {
+        current = current->getNext();
+    }
+    
+    for(int index = startingIndex; index < this->size; index++)
+    {
+        if(current->getValue() == searchValue)
+        {
+            return index;
+        }
+        else
+        {
+            current = current->getValue();
+        }
+    }
+    
+    return indexNotFound;
+}
+
+template <class Type>
+int CTECList<Type> :: indexOf(Type searchValue)
+{
+    assert(this->size > 0);
+    
+    int index = 0;
+    
+    ArrayNode<Type> * searchPointer;
+    
+    for(searchPointer = head; searchPointer != nullptr; searchPointer = searchPointer->getNext())
+    {
+        if(searchValue == searchPointer->getValue())
+        {
+            return index;
+        }
+        index++;
+    }
+    index = -1;
+    return index;
+}
+

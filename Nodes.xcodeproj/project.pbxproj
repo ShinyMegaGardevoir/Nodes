@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6376B5641CDB90A4000ADB5E /* CTECHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */; };
 		63793FA81CCE62480081E527 /* MorningGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63793FA61CCE62480081E527 /* MorningGraph.cpp */; };
 		63E116861CA184AA00376C10 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116781CA184AA00376C10 /* NodeController.cpp */; };
 		63E116871CA184AA00376C10 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E1167A1CA184AA00376C10 /* NodeRunner.cpp */; };
@@ -32,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECHashTable.cpp; sourceTree = "<group>"; };
+		6376B5631CDB90A4000ADB5E /* CTECHashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECHashTable.hpp; sourceTree = "<group>"; };
 		63793FA61CCE62480081E527 /* MorningGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MorningGraph.cpp; sourceTree = "<group>"; };
 		63793FA71CCE62480081E527 /* MorningGraph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MorningGraph.hpp; sourceTree = "<group>"; };
 		63E1166D1CA1848900376C10 /* Nodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nodes; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +114,8 @@
 				63F7AA701CBE90B700194FB8 /* CTECBinaryTree.hpp */,
 				63793FA61CCE62480081E527 /* MorningGraph.cpp */,
 				63793FA71CCE62480081E527 /* MorningGraph.hpp */,
+				6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */,
+				6376B5631CDB90A4000ADB5E /* CTECHashTable.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				63F7AA711CBE90B700194FB8 /* CTECBinaryTree.cpp in Sources */,
 				63E1168A1CA184AA00376C10 /* CTECList.cpp in Sources */,
 				63793FA81CCE62480081E527 /* MorningGraph.cpp in Sources */,
+				6376B5641CDB90A4000ADB5E /* CTECHashTable.cpp in Sources */,
 				63E116891CA184AA00376C10 /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -223,22 +223,31 @@ void NodeController::tryTree()
     testTree.insert(20);
     testTree.insert(2);
     testTree.insert(1);
-    if(testTree.contains(2) == 0)
-    {
-        cout << "False" << endl;
-    }
-    else if(testTree.contains(2) > 0)
-    {
-        cout << "True" << endl;
-    }
-    cout << "InTraversal " << endl;
+    testTree.insert(10);
+    testTree.insert(12);
+    testTree.insert(21);
+    testTree.insert(7);
+    
+    cout << "InorderTraversal " << endl;
     testTree.inorderTraversal(testTree.getRoot());
-    testTree.remove(1);
+    cout << "" << endl;
+    cout << "Size of the tree after Inorder Traversal: " << testTree.getSize() << endl;
+    
+    testTree.insert(13);
+    cout << "Inserted 13 into the tree." << endl;
+    
     cout << "\nPreorderTraversal " << endl;
     testTree.preorderTraversal(testTree.getRoot());
+    cout << "" << endl;
+    cout << "Size of the tree after Preorder Traversal: " << testTree.getSize() << endl;
+    
+    testTree.insert(23);
+    cout << "Inserted 23 into the tree." << endl;
+    
     cout << "\nPostorderTraversal " << endl;
     testTree.postorderTraversal(testTree.getRoot());
-    cout << "\nTrees! " << endl;
+    cout << "" << endl;
+    cout << "Size of the tree after Postorder Traversal: " << testTree.getSize() << endl;
 }
 
 void NodeController :: tryGraphs()
@@ -291,7 +300,7 @@ void NodeController :: tryGraphs()
 
 void NodeController :: start() //Le start method
 {
-   tryGraphs();
+    tryTree();
     
     
     

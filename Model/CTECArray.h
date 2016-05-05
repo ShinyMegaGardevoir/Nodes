@@ -20,7 +20,9 @@ public:
 	void set(int position, const Type& value);
     void selectionSort();
     int seqSearch(int data [], const Type& value);
+    int indexOf(Type searchValue);
 
+    
 private:
 	int size;
 	ArrayNode<Type> * head;

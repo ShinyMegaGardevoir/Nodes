@@ -31,8 +31,10 @@ public:
 	Type removeFromIndex(int index);
 	Type set(int index, const Type& value);
     void selectionSort();
+    int nextIndexOf(int startingIndex, Type searchValue);
+    int indexOf(Type searchValue);
 
-
+    
 private:
 	int size;
 	ArrayNode<Type> * head;

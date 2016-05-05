@@ -141,6 +141,7 @@ void CTECArray<Type> :: selectionSort()
 }
 
 
+
 template<class Type>
 int CTECArray<Type> :: seqSearch(int item [], const Type& value)
 {
@@ -165,4 +166,25 @@ int CTECArray<Type> :: seqSearch(int item [], const Type& value)
         return -1;
     }
     
+}
+
+template <class Type>
+int CTECArray<Type> :: indexOf(Type searchValue)
+{
+    assert(this->size > 0);
+    
+    int index = 0;
+    
+    ArrayNode<Type> * searchPointer;
+    
+    for(searchPointer = head; searchPointer != nullptr; searchPointer = searchPointer->getNext())
+    {
+        if(searchValue == searchPointer->getValue())
+        {
+            return index;
+        }
+        index++;
+    }
+    index = -1;
+    return index;
 }
