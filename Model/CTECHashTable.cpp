@@ -77,7 +77,22 @@ int CTECHashTable<Type> :: findPosition(HashNode<Type> current)
 template <class Type>
 bool CTECHashTable<Type> :: contains(HashNode<Type> current)
 {
+    bool isInTable = false;
     
+    int index = findPosition(current);
+    while(internalStorage[index] != nullptr && !isInTable)
+    {
+        if(internalStorage[index].getValue() == current.getValue())
+        {
+            isInTable = true;
+        }
+        else
+        {
+            index = (index + 1) % capacity;
+        }
+    }
+    
+    return isInTable;
 }
 
 template <class Type>
