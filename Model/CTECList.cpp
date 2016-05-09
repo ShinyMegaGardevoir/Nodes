@@ -197,7 +197,7 @@ Type CTECList<Type>::removeFromIndex(int index) //
 	assert(index >= 0 && index < size);
 
 			Type thingToRemove;
-			ArrayNode<Type> * previous, deleteMe, newNext;
+			
 			if(index == 0)
 			{
 				thingToRemove = removeFromFront();

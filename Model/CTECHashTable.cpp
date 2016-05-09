@@ -7,6 +7,7 @@
 //
 
 #include "CTECHashTable.hpp"
+#include <cmath>
 
 template <class Type>
 CTECHashTable<Type> :: CTECHashTable()
@@ -44,12 +45,9 @@ void CTECHashTable<Type> :: add(HashNode<Type> current)
                 
             }
             
-            internalStorage[positionToInsert] = current;
         }
-        else
-        {
-            internalStorage[positionToInsert] = current;
-        }
+        
+        internalStorage[positionToInsert] = current;
     }
 }
 
@@ -91,11 +89,72 @@ int CTECHashTable<Type> :: handleCollision(HashNode<Type> current)
 template <class Type>
 void CTECHashTable<Type> :: updateSize()
 {
+    int updatedCapacity = getNextPrime();
+    HashNode<Type> * updatedStorage = new HashNode<Type>[updatedCapacity];
     
+    int oldCapacity = capacity;
+    capacity = updatedCapacity;
+    for(int index = 0; index < oldCapacity; index++)
+    {
+        if(internalStorage[index] != nullptr)
+        {
+            int updatedPosition = findPosition(internalStorage[index]);
+            updatedStorage[updatedPosition] = internalStorage[index];
+        }
+        
+    }
+    
+    internalStorage = updatedStorage;
 }
 
 template <class Type>
 int CTECHashTable<Type> :: getSize()
 {
     return this->size;
+}
+
+template <class Type>
+int CTECHashTable<Type> :: getNextPrime()
+{
+    int nextPrime = (capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime++;
+    }
+    
+    return nextPrime;
+}
+
+template <class Type>
+bool CTECHashTable<Type> :: isPrime(int candidateNumber)
+{
+    bool isPrime = true;
+    
+    if(candidateNumber <= 1)
+    {
+        return false;
+    }
+    else if(candidateNumber == 2 || candidateNumber == 3)
+    {
+        isPrime = true;
+    }
+    else if(candidateNumber % 2 == 0)
+    {
+        isPrime = false;
+    }
+    
+    else
+    {
+        for(int next = 3; next <= sqrt(candidateNumber) + 1; next += 2)
+        {
+            if(candidateNumber % next == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    
+    return isPrime;
 }

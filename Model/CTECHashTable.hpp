@@ -35,6 +35,9 @@
         int findPosition(HashNode<Type> current);
         int handleCollision(HashNode<Type> current);
         void updateSize();
+        
+        int getNextPrime();
+        bool isPrime(int candidateNumber);
     };
 
 
