@@ -54,7 +54,27 @@ void CTECHashTable<Type> :: add(HashNode<Type> current)
 template <class Type>
 bool CTECHashTable<Type> :: remove(HashNode<Type> current)
 {
+    bool wasRemoved = false;
     
+    if(!contains(current))
+    {
+        int index = findPosition(current);
+        while(internalStorage[index] != nullptr && !wasRemoved)
+        {
+            if(internalStorage[index].getValue() == current.getValue())
+            {
+                wasRemoved = true;
+                internalStorage[index] = nullptr;
+                size--;
+            }
+            else
+            {
+                index = (index + 1) % capacity;
+            }
+        }
+    }
+    
+    return wasRemoved;
 }
 
 
