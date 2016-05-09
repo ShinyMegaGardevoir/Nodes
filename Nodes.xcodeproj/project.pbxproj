@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6373D0A31CE0D228005D8749 /* HashNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6373D0A11CE0D228005D8749 /* HashNode.cpp */; };
 		6376B5641CDB90A4000ADB5E /* CTECHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */; };
 		63793FA81CCE62480081E527 /* MorningGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63793FA61CCE62480081E527 /* MorningGraph.cpp */; };
 		63E116861CA184AA00376C10 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E116781CA184AA00376C10 /* NodeController.cpp */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6373D0A11CE0D228005D8749 /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashNode.cpp; sourceTree = "<group>"; };
+		6373D0A21CE0D228005D8749 /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
 		6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECHashTable.cpp; sourceTree = "<group>"; };
 		6376B5631CDB90A4000ADB5E /* CTECHashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECHashTable.hpp; sourceTree = "<group>"; };
 		63793FA61CCE62480081E527 /* MorningGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MorningGraph.cpp; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				63793FA71CCE62480081E527 /* MorningGraph.hpp */,
 				6376B5621CDB90A4000ADB5E /* CTECHashTable.cpp */,
 				6376B5631CDB90A4000ADB5E /* CTECHashTable.hpp */,
+				6373D0A11CE0D228005D8749 /* HashNode.cpp */,
+				6373D0A21CE0D228005D8749 /* HashNode.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				63793FA81CCE62480081E527 /* MorningGraph.cpp in Sources */,
 				6376B5641CDB90A4000ADB5E /* CTECHashTable.cpp in Sources */,
 				63E116891CA184AA00376C10 /* CTECArray.cpp in Sources */,
+				6373D0A31CE0D228005D8749 /* HashNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

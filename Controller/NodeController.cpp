@@ -300,7 +300,7 @@ void NodeController :: tryGraphs()
 
 void NodeController :: start() //Le start method
 {
-    tryTree();
+    tryGraphs();
     
     
     

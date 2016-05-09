@@ -14,7 +14,7 @@ CTECHashTable<Type> :: CTECHashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->internalStorage = new Type[capacity];
+    this->internalStorage = new HashNode<Type>[capacity];
 }
 
 template <class Type>
@@ -24,9 +24,9 @@ CTECHashTable<Type> :: ~CTECHashTable()
 }
 
 template <class Type>
-void CTECHashTable<Type> :: add(const Type& value)
+void CTECHashTable<Type> :: add(HashNode<Type> current)
 {
-    if(!contains(value))
+    if(!contains(current))
     {
         
         if(size/capacity >= this->efficiencyPercentage)
@@ -34,45 +34,56 @@ void CTECHashTable<Type> :: add(const Type& value)
             updateSize();
         }
         
-        int positionToInsert = findPosition(value);
+        int positionToInsert = findPosition(current);
         
         if(internalStorage[positionToInsert] != nullptr)
         {
             while(internalStorage[positionToInsert] != nullptr)
             {
-                positionToInsert = (positionToInsert + 1) % size;
+                positionToInsert = (positionToInsert + 1) % capacity;
                 
             }
             
-            internalStorage[positionToInsert] = value;
+            internalStorage[positionToInsert] = current;
         }
         else
         {
-            internalStorage[positionToInsert] = value;
+            internalStorage[positionToInsert] = current;
         }
     }
 }
 
 template <class Type>
-bool CTECHashTable<Type> :: remove(const Type& value)
+bool CTECHashTable<Type> :: remove(HashNode<Type> current)
+{
+    
+}
+
+
+/*
+ 
+ Very basice hashing Algorithm.
+ Simply assigns a position based on modulo.
+ 
+ */
+template <class Type>
+int CTECHashTable<Type> :: findPosition(HashNode<Type> current)
+{
+    int position = 0;
+    
+    position = current.getKey() % capacity;
+    
+    return position;
+}
+
+template <class Type>
+bool CTECHashTable<Type> :: contains(HashNode<Type> current)
 {
     
 }
 
 template <class Type>
-int CTECHashTable<Type> :: findPosition(const Type& value)
-{
-    
-}
-
-template <class Type>
-bool CTECHashTable<Type> :: contains(const Type &value)
-{
-    
-}
-
-template <class Type>
-int CTECHashTable<Type> :: handleCollision(const Type &value)
+int CTECHashTable<Type> :: handleCollision(HashNode<Type> current)
 {
     
 }
@@ -86,5 +97,5 @@ void CTECHashTable<Type> :: updateSize()
 template <class Type>
 int CTECHashTable<Type> :: getSize()
 {
-    return this->size();
+    return this->size;
 }

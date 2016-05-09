@@ -9,8 +9,8 @@
 #ifndef CTECHashTable_hpp
 #define CTECHashTable_hpp
 
-#include <stdio.h>
-
+#include "CTECArray.cpp"
+#include "HashNode.cpp"
 
     template <class Type>
     class CTECHashTable
@@ -19,9 +19,9 @@
         CTECHashTable();
         ~CTECHashTable();
         
-        void add(const Type& value);
-        bool remove(const Type& value);
-        bool contains(const Type& value);
+        void add(HashNode<Type> current);
+        bool remove(HashNode<Type> current);
+        bool contains(HashNode<Type> current);
         int getSize();
         
         
@@ -30,10 +30,10 @@
         int capacity;
         double efficiencyPercentage;
         int size;
-        Type * internalStorage;
+        HashNode<Type> * internalStorage;
 
-        int findPosition(const Type& value);
-        int handleCollision(const Type& value);
+        int findPosition(HashNode<Type> current);
+        int handleCollision(HashNode<Type> current);
         void updateSize();
     };
 
