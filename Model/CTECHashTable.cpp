@@ -15,7 +15,8 @@ CTECHashTable<Type> :: CTECHashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->internalStorage = new HashNode<Type>[capacity];
+    
+    this->internalStorage = new HashNode<Type>*[capacity];
     this->tableStorage = new CTECList<HashNode<Type>>[capacity];
 }
 
@@ -49,7 +50,8 @@ void CTECHashTable<Type> :: add(HashNode<Type> current)
             
         }
         
-        internalStorage[positionToInsert] = current;
+        internalStorage[positionToInsert] = &current;
+        size++;
     }
 }
 
@@ -104,7 +106,7 @@ bool CTECHashTable<Type> :: contains(HashNode<Type> current)
     int index = findPosition(current);
     while(internalStorage[index] != nullptr && !isInTable)
     {
-        if(internalStorage[index].getValue() == current.getValue())
+        if(internalStorage[index]->getValue() == current.getValue())
         {
             isInTable = true;
         }
@@ -131,7 +133,7 @@ template <class Type>
 void CTECHashTable<Type> :: updateSize()
 {
     int updatedCapacity = getNextPrime();
-    HashNode<Type> * updatedStorage = new HashNode<Type>[updatedCapacity];
+    HashNode<Type> ** updatedStorage = new HashNode<Type>*[updatedCapacity];
     
     int oldCapacity = capacity;
     capacity = updatedCapacity;
@@ -139,7 +141,7 @@ void CTECHashTable<Type> :: updateSize()
     {
         if(internalStorage[index] != nullptr)
         {
-            int updatedPosition = findPosition(internalStorage[index]);
+            int updatedPosition = findPosition(*internalStorage[index]);
             updatedStorage[updatedPosition] = internalStorage[index];
         }
         

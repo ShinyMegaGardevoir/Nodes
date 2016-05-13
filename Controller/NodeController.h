@@ -24,6 +24,10 @@
 #include "../Model/CTECBinaryTree.cpp"
 
 #include "../Model/MorningGraph.cpp"
+
+#include "../Model/CTECHashTable.cpp"
+
+
 using namespace std;
 
 
@@ -55,6 +59,8 @@ private:
     void tryTree();
     
     void tryGraphs();
+    
+    void testHash();
     
 };
 

@@ -8,6 +8,8 @@
 #include "NodeController.h"
 #include <iostream>
 #include <cmath>
+#include <time.h>
+#include <stdio.h>
 //using namespace std;
 
 NodeController::NodeController()
@@ -298,9 +300,106 @@ void NodeController :: tryGraphs()
     cout << "" << endl;
 }
 
+void NodeController :: testHash()
+{
+    CTECHashTable<int> testerTable;
+    HashNode<int> tempArray[20];
+    srand(time(NULL));
+    for(int spot = 0; spot < 20; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> temp = HashNode<int>(randomKey, randomValue);
+        testerTable.add(temp);
+        tempArray[spot] = temp;
+    }
+    
+    
+    int random3 = rand();
+    int random4 = rand();
+    int random5 = rand();
+    int random6 = rand();
+    
+    
+    bool test1 = testerTable.contains(tempArray[0]);
+    
+    if(test1)
+    {
+        cout << "The value " << tempArray[0].getValue() << " is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << tempArray[0].getValue() << " isn't in the Array." << endl;
+    }
+    
+    bool test2 = testerTable.contains(tempArray[1]);
+    
+    if(test2)
+    {
+        cout << "The value " << tempArray[1].getValue() << "is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << tempArray[1].getValue() << "isn't in the Array." << endl;
+    }
+    
+    bool test3 = testerTable.contains(tempArray[random3]);
+    
+    if(test3)
+    {
+        cout << "The value " << random3 << "is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << random3 << "isn't in the Array." << endl;
+    }
+    
+    bool test4 = testerTable.contains(tempArray[random4]);
+    
+    if(test4)
+    {
+        cout << "The value " << random4 << "is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << random4 << "isn't in the Array." << endl;
+    }
+    
+    bool test5 = testerTable.contains(tempArray[random5]);
+    
+    if(test5)
+    {
+        cout << "The value " << random5 << "is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << random5 << "isn't in the Array." << endl;
+    }
+    
+    bool test6 = testerTable.contains(tempArray[random6]);
+    
+    if(test6)
+    {
+        cout << "The value " << random6 << "is in the Array." << endl;
+    }
+    else
+    {
+        cout << "The value " << random6 << "isn't in the Array." << endl;
+    }
+
+
+
+
+
+    
+    
+    
+    
+}
+
 void NodeController :: start() //Le start method
 {
-    tryGraphs();
+    testHash();
     
     
     

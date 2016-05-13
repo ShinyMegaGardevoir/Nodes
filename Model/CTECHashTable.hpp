@@ -9,9 +9,8 @@
 #ifndef CTECHashTable_hpp
 #define CTECHashTable_hpp
 
-#include "CTECArray.cpp"
 #include "HashNode.cpp"
-#include "CTECList.cpp"
+#include "CTECList.h"
 
     template <class Type>
     class CTECHashTable
@@ -31,7 +30,7 @@
         int capacity;
         double efficiencyPercentage;
         int size;
-        HashNode<Type> * internalStorage;
+        HashNode<Type> ** internalStorage;
         CTECList<HashNode<Type>> * tableStorage;
         int tableCapacity;
         int tableSize;

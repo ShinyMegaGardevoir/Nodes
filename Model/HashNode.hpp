@@ -15,6 +15,8 @@ template <class Type>
 class HashNode
 {
 public:
+    HashNode();
+    ~HashNode();
     HashNode(int key, const Type& value);
     void setKey(int key);
     void setValue(const Type& value);
