@@ -315,10 +315,7 @@ void NodeController :: testHash()
     }
     
     
-    int random3 = rand();
-    int random4 = rand();
-    int random5 = rand();
-    int random6 = rand();
+    
     
     
     bool test1 = testerTable.contains(tempArray[0]);
@@ -336,55 +333,55 @@ void NodeController :: testHash()
     
     if(test2)
     {
-        cout << "The value " << tempArray[1].getValue() << "is in the Array." << endl;
+        cout << "The value " << tempArray[1].getValue() << " is in the Array." << endl;
     }
     else
     {
-        cout << "The value " << tempArray[1].getValue() << "isn't in the Array." << endl;
+        cout << "The value " << tempArray[1].getValue() << " isn't in the Array." << endl;
     }
     
-    bool test3 = testerTable.contains(tempArray[random3]);
+    bool test3 = testerTable.contains(tempArray[2]);
     
     if(test3)
     {
-        cout << "The value " << random3 << "is in the Array." << endl;
+        cout << "The value " << tempArray[2].getValue() << " is in the Array." << endl;
     }
     else
     {
-        cout << "The value " << random3 << "isn't in the Array." << endl;
+        cout << "The value " << tempArray[2].getValue() << " isn't in the Array." << endl;
     }
     
-    bool test4 = testerTable.contains(tempArray[random4]);
+    bool test4 = testerTable.contains(tempArray[3]);
     
     if(test4)
     {
-        cout << "The value " << random4 << "is in the Array." << endl;
+        cout << "The value " << tempArray[3].getValue() << " is in the Array." << endl;
     }
     else
     {
-        cout << "The value " << random4 << "isn't in the Array." << endl;
+        cout << "The value " << tempArray[3].getValue() << " isn't in the Array." << endl;
     }
     
-    bool test5 = testerTable.contains(tempArray[random5]);
+    bool test5 = testerTable.contains(tempArray[4]);
     
     if(test5)
     {
-        cout << "The value " << random5 << "is in the Array." << endl;
+        cout << "The value " << tempArray[4].getValue() << " is in the Array." << endl;
     }
     else
     {
-        cout << "The value " << random5 << "isn't in the Array." << endl;
+        cout << "The value " << tempArray[4].getValue() << " isn't in the Array." << endl;
     }
     
-    bool test6 = testerTable.contains(tempArray[random6]);
+    bool test6 = testerTable.contains(tempArray[5]);
     
     if(test6)
     {
-        cout << "The value " << random6 << "is in the Array." << endl;
+        cout << "The value " << tempArray[5].getValue() << " is in the Array." << endl;
     }
     else
     {
-        cout << "The value " << random6 << "isn't in the Array." << endl;
+        cout << "The value " << tempArray[5].getValue() << " isn't in the Array." << endl;
     }
 
 
